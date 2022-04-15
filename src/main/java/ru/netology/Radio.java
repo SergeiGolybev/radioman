@@ -2,7 +2,7 @@ package ru.netology;
 
 public class Radio {
 
-    private int currentChannel = 9;
+    private int currentChannel;
     private int currentVolume;
 
     public int getCurrentChannel() {
