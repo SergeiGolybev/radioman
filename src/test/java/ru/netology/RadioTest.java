@@ -126,7 +126,7 @@ class RadioTest {
     @Test
     void shouldSetLimitCurrentVolume() {
 
-    Radio radio = new Radio();
+        Radio radio = new Radio();
 
         radio.setCurrentVolume(5);
 

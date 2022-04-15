@@ -26,7 +26,7 @@ public class Radio {
     public void nextChannel() {
 
         if (currentChannel < 9) {
-            currentChannel ++;
+            currentChannel++;
         } else {
             currentChannel = 0;
         }
@@ -35,8 +35,8 @@ public class Radio {
     public void prevChannel() {
 
         if (currentChannel > 0) {
-            currentChannel --;
-    } else {
+            currentChannel--;
+        } else {
             currentChannel = 9;
         }
     }
@@ -54,13 +54,13 @@ public class Radio {
 
     public void increaseVolume() {
         if (currentVolume < 10) {
-            currentVolume ++;
+            currentVolume++;
         }
     }
 
     public void decreaseVolume() {
         if (currentVolume > 0) {
-            currentVolume --;
+            currentVolume--;
         }
     }
 }
