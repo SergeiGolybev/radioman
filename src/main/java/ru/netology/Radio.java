@@ -21,10 +21,6 @@ public class Radio {
         return quantityOfChannels;
     }
 
-    public void setQuantityOfChannels(int quantityOfChannels) {
-        this.quantityOfChannels = quantityOfChannels;
-    }
-
     public int getCurrentVolume() {
 
         return currentVolume;
@@ -86,9 +82,6 @@ public class Radio {
     public void decreaseVolume() {
         if (currentVolume > minVolume) {
             currentVolume--;
-        } else {
-            return;
         }
     }
-
 }
