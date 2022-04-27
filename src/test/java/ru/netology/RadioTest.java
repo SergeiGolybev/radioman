@@ -9,7 +9,6 @@ class RadioTest {
     @Test
     public void useConstructor() {
         Radio radio = new Radio();
-        ;
         int expected = 10;
         int actual = radio.getQuantityOfChannels();
 
