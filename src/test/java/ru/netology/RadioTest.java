@@ -7,6 +7,27 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
 
     @Test
+    public void useConstructor() {
+        Radio radio = new Radio();
+        ;
+        int expected = 10;
+        int actual = radio.getQuantityOfChannels();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void setQuantityOfChannels() {
+
+        Radio radio = new Radio(150);
+        ;
+        int expected = 150;
+        int actual = radio.getQuantityOfChannels();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void shouldSetLimitCurrentChannel() {
 
         Radio radio = new Radio();
@@ -128,9 +149,9 @@ class RadioTest {
 
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(5);
+        radio.setCurrentVolume(35);
 
-        int expected = 5;
+        int expected = 35;
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -141,9 +162,9 @@ class RadioTest {
 
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(12);
+        radio.setCurrentVolume(105);
 
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -167,11 +188,11 @@ class RadioTest {
 
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(6);
+        radio.setCurrentVolume(34);
 
         radio.increaseVolume();
 
-        int expected = 7;
+        int expected = 35;
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -182,11 +203,11 @@ class RadioTest {
 
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
 
         radio.increaseVolume();
 
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -197,11 +218,11 @@ class RadioTest {
 
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(3);
+        radio.setCurrentVolume(35);
 
         radio.decreaseVolume();
 
-        int expected = 2;
+        int expected = 34;
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -221,4 +242,6 @@ class RadioTest {
 
         assertEquals(expected, actual);
     }
+
+
 }
