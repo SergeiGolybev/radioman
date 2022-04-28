@@ -9,7 +9,6 @@ class RadioTest {
     @Test
     public void useConstructor() {
         Radio radio = new Radio();
-        ;
         int expected = 10;
         int actual = radio.getQuantityOfChannels();
 
@@ -19,10 +18,10 @@ class RadioTest {
     @Test
     void setQuantityOfChannels() {
 
-        Radio radio = new Radio(150);
-        ;
-        int expected = 150;
-        int actual = radio.getQuantityOfChannels();
+        Radio radio = new Radio(40);
+        radio.setCurrentChannel(35);
+        int expected = 35;
+        int actual = radio.getCurrentChannel();
 
         assertEquals(expected, actual);
     }
