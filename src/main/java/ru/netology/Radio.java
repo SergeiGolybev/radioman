@@ -5,21 +5,23 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Radio {
 
-    private int currentVolume;
-    private int currentChannel;
-    private int quantityOfChannels = 10;
-    private int maxVolume = 100;
-    private int minVolume = 0;
-    private int minChannelsNumber = 0;
-    private int maxChannelsNumber = quantityOfChannels - 1;
+        private int currentVolume;
+        private int currentChannel;
+        private int quantityOfChannels = 10;
+        int minVolume;
+        int maxVolume = 100;
+        int minChannelsNumber;
+        int maxChannelsNumber = quantityOfChannels - 1;
 
-    public Radio(int quantityOfChannels) {
-        this.quantityOfChannels = quantityOfChannels;
-    }
+        public Radio(int quantityOfChannels) {
+            this.minChannelsNumber = 0;
+            this.maxChannelsNumber = quantityOfChannels - 1;
+            this.quantityOfChannels = quantityOfChannels;
+        }
 
     public void setCurrentVolume(int currentVolume) {
 

@@ -19,9 +19,9 @@ class RadioTest {
     void setQuantityOfChannels() {
 
         Radio radio = new Radio(150);
-        ;
-        int expected = 150;
-        int actual = radio.getQuantityOfChannels();
+        radio.setCurrentChannel(124);
+        int expected = 124;
+        int actual = radio.getCurrentChannel();
 
         assertEquals(expected, actual);
     }
